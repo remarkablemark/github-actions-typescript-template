@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
 
-import { run } from '../src';
+import { run } from '.';
 
 jest.mock('@actions/core');
 
