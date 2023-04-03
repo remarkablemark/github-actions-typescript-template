@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-typescript-template",
+  "name": "github-actions-typescript-template",
   "version": "1.0.0-alpha",
   "description": "npm package TypeScript template",
   "author": "Mark <mark@remarkablemark.org>",
@@ -12,22 +12,10 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
-    "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable && npm run lint && npm run lint:tsc && npm run test:ci && npm run clean && npm run build",
     "test": "jest",
     "test:ci": "CI=true jest --ci --colors --coverage",
     "test:watch": "jest --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/remarkablemark/npm-package-typescript-template"
-  },
-  "bugs": {
-    "url": "https://github.com/remarkablemark/npm-package-typescript-template/issues"
-  },
-  "keywords": [
-    "npm-package-typescript-template"
-  ],
   "devDependencies": {
     "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
@@ -47,8 +35,6 @@
     "ts-jest": "29.1.0",
     "typescript": "5.0.3"
   },
-  "files": [
-    "lib/"
-  ],
+  "private": true,
   "license": "MIT"
 }
