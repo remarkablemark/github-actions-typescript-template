@@ -4,7 +4,6 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -36,3 +35,18 @@ jobs:
 
       - name: Codecov
         uses: codecov/codecov-action@v3
+
+      - name: Run action
+        uses: .
+
+  # action should work on a clean machine without building
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run action
+        uses: .
+        with:
+          version: 2.3.4
