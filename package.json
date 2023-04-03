@@ -5,10 +5,10 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "src/index.ts",
   "scripts": {
-    "build": "ncc build",
+    "build": "ncc build --minify",
     "build:watch": "tsc --watch",
     "clean": "rm -rf coverage dist",
-    "lint": "eslint --ignore-path .gitignore --ignore-pattern dist --ext .js,.ts,.tsx .",
+    "lint": "eslint --ignore-path .gitignore --ignore-path .prettierignore --ext .js,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
