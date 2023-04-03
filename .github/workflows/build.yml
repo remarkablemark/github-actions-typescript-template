@@ -39,6 +39,14 @@ jobs:
       - name: Run action
         uses: ./
 
+      - name: Check Git working tree
+        run: |
+          if [[ $(git diff --stat) != '' ]]; then
+            echo 'Detected uncommitted changes. See status below:'
+            git diff
+            exit 1
+          fi
+
   # action should work on a clean machine without building
   test:
     runs-on: ubuntu-latest
