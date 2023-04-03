@@ -40,10 +40,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Build files
-docs/
-lib/
-
 # Vim swap files
 *.swp
 

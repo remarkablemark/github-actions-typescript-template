@@ -8,7 +8,7 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "outDir": "lib",
+    "outDir": "dist",
     "noEmit": false
   },
   "include": ["src"]

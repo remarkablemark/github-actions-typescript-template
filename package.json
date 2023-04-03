@@ -1,13 +1,13 @@
 {
   "name": "github-actions-typescript-template",
   "version": "1.0.0-alpha",
-  "description": "npm package TypeScript template",
+  "description": "GitHub Actions TypeScript template",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "clean": "rm -rf coverage docs lib",
+    "clean": "rm -rf coverage dist",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
