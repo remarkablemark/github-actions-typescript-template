@@ -12,8 +12,19 @@ See [action.yml](action.yml)
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
-  - uses: remarkablemark/github-actions-typescript-template
+  - uses: remarkablemark/github-actions-typescript-template@v1
+```
+
+## Inputs
+
+### `version`
+
+**Optional**: The version. Defaults to `1.2.3`. Example:
+
+```yaml
+- uses: remarkablemark/github-actions-typescript-template@v1
+  with:
+    version: 1.2.3
 ```
 
 ## Contributions

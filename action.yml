@@ -5,7 +5,7 @@ inputs:
   version:
     description: Description
     required: false
-    default: Default
+    default: 1.2.3
 runs:
   using: node16
   main: dist/index.js
