@@ -19,7 +19,7 @@ steps:
 
 ### `version`
 
-**Optional**: The version. Defaults to `1.2.3`. Example:
+**Optional**: The version. Defaults to `1.2.3`:
 
 ```yaml
 - uses: remarkablemark/github-actions-typescript-template@v1
