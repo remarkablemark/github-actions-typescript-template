@@ -1,8 +1,16 @@
 # github-actions-typescript-template
 
+[![version](https://badgen.net/github/release/remarkablemark/github-actions-typescript-template)](https://github.com/remarkablemark/github-actions-typescript-template/releases)
 [![build](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml)
 
-GitHub Actions TypeScript template. Inspired by [actions/typescript-action](https://github.com/actions/typescript-action).
+:gear: GitHub Actions TypeScript Template. Inspired by [actions/typescript-action](https://github.com/actions/typescript-action).
+
+## Quick Start
+
+```yaml
+- name: GitHub Actions TypeScript Template
+  uses: remarkablemark/github-actions-typescript-template@v1
+```
 
 ## Usage
 
