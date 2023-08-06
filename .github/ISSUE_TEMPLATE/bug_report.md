@@ -25,7 +25,6 @@ assignees: remarkablemark
 
 - Version:
 - Platform:
-- Browser:
 - OS:
 
 ## Keywords
