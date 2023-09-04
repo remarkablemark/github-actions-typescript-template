@@ -6,7 +6,7 @@ inputs:
     description: Description
     default: 1.2.3
 runs:
-  using: node16
+  using: node20
   main: dist/index.js
 branding:
   icon: activity
