@@ -19,8 +19,7 @@ See [action.yml](action.yml)
 **Basic:**
 
 ```yaml
-steps:
-  - uses: remarkablemark/github-actions-typescript-template@v1
+- uses: remarkablemark/github-actions-typescript-template@v1
 ```
 
 ## Inputs
