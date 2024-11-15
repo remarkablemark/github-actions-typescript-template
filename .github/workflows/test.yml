@@ -2,7 +2,7 @@ name: test
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,7 +32,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   # action should work on a clean machine without building
-  action:
+  integration:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
