@@ -2,8 +2,9 @@
 
 [![version](https://badgen.net/github/release/remarkablemark/github-actions-typescript-template)](https://github.com/remarkablemark/github-actions-typescript-template/releases)
 [![build](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/github-actions-typescript-template/graph/badge.svg?token=G7QM7T166I)](https://codecov.io/gh/remarkablemark/github-actions-typescript-template)
 
-:gear: GitHub Actions TypeScript Template. Inspired by [actions/typescript-action](https://github.com/actions/typescript-action).
+⚙️ GitHub Actions TypeScript Template. Inspired by [actions/typescript-action](https://github.com/actions/typescript-action).
 
 ## Quick Start
 
@@ -14,13 +15,13 @@
 
 ## Usage
 
-See [action.yml](action.yml)
-
 **Basic:**
 
 ```yaml
 - uses: remarkablemark/github-actions-typescript-template@v1
 ```
+
+See [action.yml](action.yml)
 
 ## Inputs
 
@@ -33,10 +34,6 @@ See [action.yml](action.yml)
   with:
     version: 1.2.3
 ```
-
-## Contributions
-
-Contributions are welcome!
 
 ## License
 
