@@ -6,6 +6,7 @@ export async function run() {
     core.debug(`version: ${version}`);
     core.setOutput('version', version);
   } catch (error) {
+    /* istanbul ignore else */
     if (error instanceof Error) {
       core.setFailed(error.message);
     }
