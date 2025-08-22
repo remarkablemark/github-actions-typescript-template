@@ -14,8 +14,8 @@ it('runs action successfully', async () => {
   const version = '1.2.3';
   mockedCore.getInput.mockReturnValueOnce(version);
   await run();
-  expect(mockedCore.debug).toBeCalledWith(`version: ${version}`);
-  expect(mockedCore.setOutput).toBeCalledWith('version', version);
+  expect(mockedCore.debug).toHaveBeenCalledWith(`version: ${version}`);
+  expect(mockedCore.setOutput).toHaveBeenCalledWith('version', version);
 });
 
 it('runs action with error', async () => {
@@ -24,5 +24,5 @@ it('runs action with error', async () => {
     throw new Error(message);
   });
   await run();
-  expect(mockedCore.setFailed).toBeCalledWith(message);
+  expect(mockedCore.setFailed).toHaveBeenCalledWith(message);
 });
