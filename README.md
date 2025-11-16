@@ -1,6 +1,6 @@
 # github-actions-typescript-template
 
-[![version](https://badgen.net/github/release/remarkablemark/github-actions-typescript-template)](https://github.com/remarkablemark/github-actions-typescript-template/releases)
+[![version](https://img.shields.io/github/release/remarkablemark/github-actions-typescript-template)](https://github.com/remarkablemark/github-actions-typescript-template/releases)
 [![build](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/github-actions-typescript-template/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/github-actions-typescript-template/graph/badge.svg?token=G7QM7T166I)](https://codecov.io/gh/remarkablemark/github-actions-typescript-template)
 
