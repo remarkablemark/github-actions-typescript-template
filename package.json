@@ -5,7 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "dist/index.mjs",
   "scripts": {
-    "build": "vite build --minify",
+    "build": "vite build",
     "build:watch": "tsc --watch",
     "clean": "rm -rf coverage dist",
     "lint": "eslint .",

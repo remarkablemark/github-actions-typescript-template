@@ -8,10 +8,19 @@ export default defineConfig({
       formats: ['es'],
     },
     outDir: 'dist',
-    minify: false,
+    minify: true,
     rollupOptions: {
       external: ['@actions/core', '@actions/tool-cache'],
     },
     target: 'node24',
+  },
+  test: {
+    globals: true,
+    environment: 'node',
+    coverage: {
+      thresholds: {
+        100: true,
+      },
+    },
   },
 });
