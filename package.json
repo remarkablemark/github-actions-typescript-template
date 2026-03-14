@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha",
   "description": "GitHub Actions TypeScript template",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "src/index.ts",
+  "main": "dist/index.mjs",
   "scripts": {
     "build": "vite build --minify",
     "build:watch": "tsc --watch",
