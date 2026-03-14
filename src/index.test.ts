@@ -1,13 +1,14 @@
 import * as core from '@actions/core';
+import { vi } from 'vitest';
 
 import { run } from '.';
 
-jest.mock('@actions/core');
+vi.mock('@actions/core');
 
-const mockedCore = jest.mocked(core);
+const mockedCore = vi.mocked(core);
 
 beforeEach(() => {
-  jest.resetAllMocks();
+  vi.resetAllMocks();
 });
 
 it('runs action successfully', async () => {
