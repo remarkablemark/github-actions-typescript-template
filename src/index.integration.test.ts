@@ -1,6 +1,6 @@
-import { execFileSync } from 'child_process';
-import { resolve } from 'path';
-import { fileURLToPath } from 'url';
+import { execFileSync } from 'node:child_process';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const nodePath = process.execPath;

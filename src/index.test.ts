@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import { vi } from 'vitest';
 
 import { run } from '.';
 
