@@ -4,7 +4,6 @@ import { beforeEach, expect, it, vi } from 'vitest';
 import { run } from '.';
 
 vi.mock('@actions/core');
-
 const mockedCore = vi.mocked(core);
 
 beforeEach(() => {
