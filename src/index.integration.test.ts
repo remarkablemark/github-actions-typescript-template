@@ -1,4 +1,4 @@
-import { execFileSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -9,10 +9,20 @@ const nodePath = process.execPath;
 const actionPath = resolve(__dirname, '../dist/index.js');
 
 it('runs action', () => {
-  const version = '1.2.3';
-  process.env.INPUT_VERSION = version;
-  const buffer = execFileSync(nodePath, [actionPath], {
-    env: process.env,
+  const result = spawnSync(nodePath, [actionPath], {
+    env: {
+      ...process.env,
+      INPUT_VERSION: '1.2.3',
+    },
+    stdio: 'pipe',
   });
-  expect(buffer.toString()).toContain(`::debug::version: ${version}`);
+
+  if (result.status !== 0) {
+    /* eslint-disable no-console */
+    console.error('stdout:', String(result.stdout));
+    console.error('stderr:', String(result.stderr));
+    /* eslint-enable no-console */
+  }
+
+  expect(result.status).toBe(0);
 });

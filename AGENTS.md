@@ -30,7 +30,7 @@ You're an expert engineer for this GitHub Action.
 - **Build:** `npm run build` (compiles TypeScript with tsup, outputs to `dist/index.js`)
 - **Lint:** `npm run lint:fix` (auto-fixes ESLint errors)
 - **Type check:** `npm run lint:tsc` (checks TypeScript for errors)
-- **Test:** `npm run test:ci` (runs Vitest unit tests, must pass with 100% coverage before commit)
+- **Test:** `npm run test:ci` (runs Vitest tests, must pass with 100% coverage before commit)
 
 ## Standards
 
