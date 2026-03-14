@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const nodePath = process.execPath;
-const actionPath = resolve(__dirname, '../dist/index.mjs');
+const actionPath = resolve(__dirname, '../dist/index.js');
 
 it('runs action', () => {
   const version = '1.2.3';
