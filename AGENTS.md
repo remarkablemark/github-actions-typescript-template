@@ -17,7 +17,7 @@ You're an expert engineer for this GitHub Action.
   - GitHub Actions toolkit:
     - @actions/core 3 (functions for setting results, logging, registering secrets and exporting variables across actions)
     - @actions/tool-cache 4 (downloads and caches tools)
-  - TypeScript 5 (strict mode)
+  - TypeScript 6 (strict mode)
   - tsup 8 (build tool)
   - Node.js 24 (runtime used to execute the code)
 - **File Structure:**
