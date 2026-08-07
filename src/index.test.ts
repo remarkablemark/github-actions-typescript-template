@@ -10,19 +10,19 @@ beforeEach(() => {
   vi.resetAllMocks();
 });
 
-it('runs action successfully', async () => {
+it('runs action successfully', () => {
   const version = '1.2.3';
   mockedCore.getInput.mockReturnValueOnce(version);
-  await run();
+  run();
   expect(mockedCore.debug).toHaveBeenCalledWith(`version: ${version}`);
   expect(mockedCore.setOutput).toHaveBeenCalledWith('version', version);
 });
 
-it('runs action with error', async () => {
+it('runs action with error', () => {
   const message = 'error';
   mockedCore.getInput.mockImplementationOnce(() => {
     throw new Error(message);
   });
-  await run();
+  run();
   expect(mockedCore.setFailed).toHaveBeenCalledWith(message);
 });

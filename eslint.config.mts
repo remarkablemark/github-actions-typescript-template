@@ -1,8 +1,7 @@
 import { fileURLToPath } from 'node:url';
 
-import { includeIgnoreFile } from '@eslint/compat';
-import eslint from '@eslint/js';
-import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
 import prettier from 'eslint-plugin-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tsdoc from 'eslint-plugin-tsdoc';
@@ -19,26 +18,35 @@ export default defineConfig([
   },
 
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+    files: ['**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx}'],
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      eslint,
+      js,
       prettier,
       tsdoc,
     },
 
-    extends: ['eslint/recommended'],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+    ],
 
     languageOptions: {
       globals: {
         ...globals.node,
-        ...globals.jest,
+        ...globals.vitest,
+      },
+      parserOptions: {
+        project: ['tsconfig.eslint.json'],
+        tsconfigRootDir: import.meta.dirname,
       },
     },
 
     rules: {
-      '@typescript-eslint/no-extra-semi': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       'no-console': 'error',
       'no-debugger': 'error',
@@ -48,6 +56,4 @@ export default defineConfig([
       'tsdoc/syntax': 'error',
     },
   },
-
-  tseslint.configs.recommended,
 ]);

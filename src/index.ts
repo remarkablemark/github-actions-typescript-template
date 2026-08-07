@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
 
-export async function run() {
+export function run() {
   try {
     const version = core.getInput('version');
     core.debug(`version: ${version}`);
