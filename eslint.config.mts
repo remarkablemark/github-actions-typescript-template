@@ -3,7 +3,6 @@ import { defineConfig, includeIgnoreFile } from 'eslint/config';
 import prettier from 'eslint-plugin-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tsdoc from 'eslint-plugin-tsdoc';
-import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 const gitignorePath = new URL('.gitignore', import.meta.url).pathname;
